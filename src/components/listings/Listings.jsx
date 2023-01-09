@@ -3,17 +3,15 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import "./Listings.css";
+import { fetchTasks } from "../../utils/api";
 
 const Listings = () => {
   const [listData, setlistData] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8000/posts")
-      .then((res) => {
-        return res.json();
-      })
-      .then((resp) => {
-        setlistData(resp);
+    fetchTasks()
+      .then((tasks) => {
+        setlistData(tasks);
       })
       .catch((err) => {
         console.log(err.messsage);
