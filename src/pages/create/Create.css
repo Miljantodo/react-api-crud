@@ -1,0 +1,11 @@
+.button-back{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.button-save{
+    display: flex;
+    margin: 30px;
+    gap: 30px;
+}

@@ -1,0 +1,19 @@
+{
+  "posts": [
+    {
+      "id": 0,
+      "title": "titleTest",
+      "body": "bodyTest"
+    },
+    {
+      "title": "Proba",
+      "body": "Isprobava",
+      "id": 1
+    },
+    {
+      "title": "Proba2",
+      "body": "aijdfbajsdbfjadsbfjasd",
+      "id": 2
+    }
+  ]
+}

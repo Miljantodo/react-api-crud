@@ -1,0 +1,19 @@
+.lanpage{
+    margin-top: 90px;
+    margin-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    
+}
+.search {
+    font-family: inherit;
+    font-size: 1.2rem;
+    border: 3px solid #161e2c;
+    border-radius: 6px;
+    background-color: transparent;
+    color: black;
+    padding: 0.5rem 1.5rem;
+  }
