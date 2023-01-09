@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Listings from "../../components/listings/Listings";
+import TaskList from "../../components/task-list/TaskList";
 import "./Home.css";
 
 const Home = () => {
@@ -15,7 +15,7 @@ const Home = () => {
         </div>
       </div>
       <div>
-        <Listings />
+        <TaskList />
       </div>
     </div>
   );

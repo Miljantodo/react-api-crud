@@ -1,9 +1,9 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
-import "./Listings.css";
+import "./TaskList.css";
 import { fetchTasks } from "../../utils/api";
+import { Oval } from "react-loader-spinner";
 
 const Listings = () => {
   const [listData, setlistData] = useState(null);
@@ -23,7 +23,7 @@ const Listings = () => {
       <div className="card">
         <div className="card-body">
           <div className="kartica">
-            {listData &&
+            {listData ? (
               listData.map((item) => (
                 <Card key={item.id} style={{ width: "18rem", margin: "15px" }}>
                   <Card.Body>
@@ -37,7 +37,21 @@ const Listings = () => {
                     </Link>
                   </Card.Body>
                 </Card>
-              ))}
+              ))
+            ) : (
+              <Oval
+                height={80}
+                width={80}
+                color="#4fa94d"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+                ariaLabel="oval-loading"
+                secondaryColor="#4fa94d"
+                strokeWidth={2}
+                strokeWidthSecondary={2}
+              />
+            )}
           </div>
         </div>
       </div>
